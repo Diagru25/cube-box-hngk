@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
+ul,
+li,
+ol {
+  object-fit: cover;
+  list-style: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.box {
+  width: 200px;
+  height: 200px;
+  margin: 300px auto;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(12deg);
+  animation: move 5s linear infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.minbox {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  transform-style: preserve-3d;
+}
+
+.minbox li {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.minbox li:nth-child(1) {
+  background: url('images/01.jpg') repeat 0 0;
+  transform: translateZ(50px);
+  background-position: center;
+}
+
+.minbox li:nth-child(2) {
+  background: url('images/02.png') repeat 0 0;
+  transform: rotateX(180deg) translateZ(50px);
+  background-position: center;
+}
+
+.minbox li:nth-child(3) {
+  background: url('images/03.png') repeat 0 0;
+  -webkit-transform: rotateX(-90deg) translateZ(50px);
+  background-position: center;
+}
+
+.minbox li:nth-child(4) {
+  background: url('images/04.png') no-repeat 0 0;
+  -webkit-transform: rotateX(90deg) translateZ(50px);
+  background-position: center;
+}
+
+.minbox li:nth-child(5) {
+  background: url('images/05.png') no-repeat 0 0;
+  -webkit-transform: rotateY(-90deg) translateZ(50px);
+  background-position: center;
+}
+
+.minbox li:nth-child(6) {
+  background: url('images/06.png') no-repeat 0 0;
+  -webkit-transform: rotateY(90deg) translateZ(50px);
+  background-position: top;
+}
+
+.maxbox {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-style: preserve-3d;
+}
+
+.maxbox li {
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  border: 1px solid #ccc;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.2;
+  transition: all 1s ease;
+}
+
+/* 正面 */
+.maxbox li:nth-child(1) {
+  background: url('images/01.jpg') repeat 0 0;
+  -webkit-transform: translateZ(100px);
+}
+
+/* 背面 */
+.maxbox li:nth-child(2) {
+  background: url('images/02.png') repeat 0 0;
+  -webkit-transform: rotateX(180deg) translateZ(100px);
+}
+
+/* 下面 */
+.maxbox li:nth-child(3) {
+  background: url('images/03.png') repeat 0 0;
+
+  -webkit-transform: rotateX(-90deg) translateZ(100px);
+}
+
+/* 上面 */
+.maxbox li:nth-child(4) {
+  background: url('images/04.png') repeat 0 0;
+
+  -webkit-transform: rotateX(90deg) translateZ(100px);
+}
+
+/* 左边 */
+.maxbox li:nth-child(5) {
+  background: url('images/05.png') repeat 0 0;
+  -webkit-transform: rotateY(-90deg) translateZ(100px);
+}
+
+/* 右边 */
+.maxbox li:nth-child(6) {
+  background: url('images/06.png') repeat 0 0;
+
+  -webkit-transform: rotateY(90deg) translateZ(100px);
+}
+
+.box:hover ol li:nth-child(1) {
+  -webkit-transform: translateZ(150px);
+}
+.box:hover ol li:nth-child(2) {
+  -webkit-transform: rotateX(180deg) translateZ(150px);
+}
+.box:hover ol li:nth-child(3) {
+  -webkit-transform: rotateX(-90deg) translateZ(150px);
+}
+.box:hover ol li:nth-child(4) {
+  -webkit-transform: rotateX(90deg) translateZ(150px);
+}
+.box:hover ol li:nth-child(5) {
+  -webkit-transform: rotateY(-90deg) translateZ(150px);
+}
+.box:hover ol li:nth-child(6) {
+  -webkit-transform: rotateY(90deg) translateZ(150px);
+}
+
+@keyframes move {
+  0% {
+    transform: rotateX(13deg) rotateY(0deg);
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: rotateX(13deg) rotateY(360deg);
   }
 }
