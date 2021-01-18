@@ -85,7 +85,7 @@ ol {
   position: absolute;
   left: 0;
   top: 0;
-  opacity: 0.25;
+  opacity: 0.3;
   transition: all 1s ease;
 }
 
@@ -144,7 +144,7 @@ ol {
   background: url("images/cropped.png") no-repeat center center;
   height: 200px;
   margin-top: 20px;
-  /* display: none; */
+  display: none;
 }
 
 @keyframes move {
@@ -160,6 +160,7 @@ ol {
   .hp {
     background: url("images/min.png") no-repeat center center;
     height: 100px;
+    display: block;
   }
 
   .box {
