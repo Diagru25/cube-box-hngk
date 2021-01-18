@@ -89,39 +89,33 @@ ol {
   transition: all 1s ease;
 }
 
-/* 正面 */
 .maxbox li:nth-child(1) {
   background: url("images/1.png") repeat 0 0;
   -webkit-transform: translateZ(100px);
 }
 
-/* 背面 */
 .maxbox li:nth-child(2) {
   background: url("images/2.jpg") repeat 0 0;
   -webkit-transform: rotateX(180deg) translateZ(100px);
 }
 
-/* 下面 */
 .maxbox li:nth-child(3) {
   background: url("images/3.png") repeat 0 0;
 
   -webkit-transform: rotateX(-90deg) translateZ(100px);
 }
 
-/* 上面 */
 .maxbox li:nth-child(4) {
   background: url("images/4.png") repeat 0 0;
 
   -webkit-transform: rotateX(90deg) translateZ(100px);
 }
 
-/* 左边 */
 .maxbox li:nth-child(5) {
   background: url("images/9.jpg") repeat 0 0;
   -webkit-transform: rotateY(-90deg) translateZ(100px);
 }
 
-/* 右边 */
 .maxbox li:nth-child(6) {
   background: url("images/61.png") repeat 0 0;
   -webkit-transform: rotateY(90deg) translateZ(100px);

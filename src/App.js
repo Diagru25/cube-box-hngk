@@ -9,7 +9,18 @@ function App() {
     items[3].style.transform = "rotateX(90deg) translateZ(150px)";
     items[4].style.transform = "rotateY(-90deg) translateZ(150px)";
     items[5].style.transform = "rotateY(90deg) translateZ(150px)";
+
+    setTimeout(() => {
+      items[0].style.transform = null;
+      items[1].style.transform = null;
+      items[2].style.transform = null;
+      items[3].style.transform = null;
+      items[4].style.transform = null;
+      items[5].style.transform = null;
+    }, 10000)
   }, 2500);
+
+
 
   return (
     <>
@@ -32,7 +43,7 @@ function App() {
         </ol>
       </div>
 
-       <div className="hp"></div>
+      <div className="hp"></div>
     </>
   );
 }
